@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <!-- style sheets -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- materialize link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <script src="https://kit.fontawesome.com/71c3f725b3.js"></script>
-
-    <!-- jquery link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Hungry For Justice</title>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+  <title>Hungry for Justice!</title>
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper purple darken-4">
-            <a href="#" class="brand-logo"><i class="fas fa-pepper-hot"></i>Hungry For Justice</a>
+  <!-- As a heading -->
+  <nav class="navbar navbar-light blue lighten-4">
+    <span class="navbar-brand">Heading</span>
+  </nav>
+
+  <!-- form here -->
+  <form>
+    <div class="form-row">
+      <div class="container">
+        <div class="md-form form-lg">
+          <input type="text" id="food-input" class="form-control form-control-lg">
+          <label for="inputLGEx">Type of Food</label>
         </div>
-    </nav>
-  
-  <footer class="page-footer purple darken-4">
-                
-                  <div class="row">
-                    <div class="col l6 s12">
-                      
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                      
-                      
-                    </div>
-                  </div>
-                
-                <div class="footer-copyright">
-                  <div class="container">
-                  © 2019 Copyright Text
-                  
-                  </div>
-                </div>
-              </footer>
-  
-<script src="./assets/javascript/app.js"></script>
+        <div class="md-form form-lg">
+          <input type="text" id="location-input" class="form-control form-control-lg">
+          <label for="inputLGEx">Location</label>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <button class="btn peach-gradient" id="submit-button">Submit</button>
+    </div>
+  </form>
+
+  <div id="food-results"></div>
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 </body>
 
 </html>
