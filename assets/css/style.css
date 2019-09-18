@@ -1,0 +1,14 @@
+
+body {
+    background-color: #ffee58;
+}
+ footer {
+     text-align: center;
+     flex: 1 0 auto;
+     text-align: center;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #ffee58;
+ }
+  
