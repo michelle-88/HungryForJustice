@@ -1,8 +1,8 @@
 // AJAX for OPD Crimes
 var latitude = "28.4329306890688";
 var longitude = "-81.4713156759186";
-// Search radius is 35,000 meters (20 miles)
-var queryOPDUrl = "https://data.cityoforlando.net/resource/4y9m-jbmz.json?$$app_token=rooCFXkjf9sgOxm15EGlRNlfE&$where=within_circle(location," + latitude + "," + longitude + ",35000)";
+
+var queryOPDUrl = "https://data.cityoforlando.net/resource/4y9m-jbmz.json?$where=within_circle(location," + latitude + "," + longitude + ",5000) and case_date_time > '2017-06' and case_offense_charge_type = 'Committed' and case_offense_category = 'Assault' and case_deposition = 'Arrest'"
 
 $.ajax({
     url: queryOPDUrl,
