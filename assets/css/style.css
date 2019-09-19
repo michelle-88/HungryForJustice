@@ -44,3 +44,7 @@ body {
 #food-input {
     color: whitesmoke
 }
+#avatar {
+    width: 250px;
+    height: 250px;
+}
