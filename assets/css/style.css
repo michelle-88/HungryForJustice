@@ -1,5 +1,5 @@
 body {
-    text-align: center;
+    background-image: url("../images/congruent_outline.png");
 }
 
 .navbar-brand {
@@ -19,7 +19,9 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    text-align: center;
     overflow-x: hidden;
+    
 }
 
 .carousel-item {
