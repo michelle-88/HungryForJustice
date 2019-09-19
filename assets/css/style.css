@@ -30,3 +30,7 @@ body {
     height: 625px;
     object-fit: scale-down;
 }
+
+#food-results {
+    color: white
+}
