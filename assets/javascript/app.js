@@ -2,7 +2,7 @@
 var latitude = "28.4329306890688";
 var longitude = "-81.4713156759186";
 
-var queryOPDUrl = "https://data.cityoforlando.net/resource/4y9m-jbmz.json?$where=within_circle(location," + latitude + "," + longitude + ",5000) and case_date_time > '2017-06' and case_offense_charge_type = 'Committed' and case_offense_category = 'Assault' and case_deposition = 'Arrest'"
+var queryOPDUrl = "https://data.cityoforlando.net/resource/4y9m-jbmz.json?$where=within_circle(location," + latitude + "," + longitude + ",5000) and case_date_time > '2017-06' and case_offense_charge_type = 'Committed' and case_offense_category = 'Assault' and case_deposition = 'Arrest'";
 
 $.ajax({
     url: queryOPDUrl,
@@ -23,13 +23,28 @@ $.ajax({
     method: "GET"
 }).then(function(response){
     console.log(response);
-    console.log(response.businesses[0].name);
-    console.log(response.businesses[0].url);
-    console.log(response.businesses[0].location.display_address);
-    console.log(response.businesses[0].rating);
-    console.log(response.businesses[0].image_url);
-    console.log(response.businesses[0].coordinates.latitude);
-    console.log(response.businesses[0].coordinates.longitude);
+
+    for(var i = 0; i < response.businesses.length; i++){
+        var foodDiv = $("<div>");
+
+        var foodName = $("<h3>").text(response.businesses[i].name);
+        var foodUrl = $("<a>").attr("href", response.businesses[i].url).append(foodName);
+        var foodImg = $("<img class='food-image'>").attr("src", response.businesses[i].image_url);
+        var foodAddress = $("<p>").text(response.businesses[i].location.display_address);
+        var foodRating = $("<p>").text("Rating: " + response.businesses[i].rating + " out of 5");
+
+        foodDiv.append(foodUrl, foodImg, foodAddress, foodRating);
+        $("#food-results").append(foodDiv);
+
+        console.log(response.businesses[i].name);
+        console.log(response.businesses[i].url);
+        console.log(response.businesses[i].location.display_address);
+        console.log(response.businesses[i].rating);
+        console.log(response.businesses[i].image_url);
+        console.log(response.businesses[i].coordinates.latitude);
+        console.log(response.businesses[i].coordinates.longitude);
+    }
+    
 });
 
 // Parameters needed for OPD Crimes API
