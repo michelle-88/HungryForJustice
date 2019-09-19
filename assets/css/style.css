@@ -1,3 +1,9 @@
+body {
+    text-align: center;
+}
+.navbar-brand {
+    text-align: center;
+}
 .page-footer {
     position: sticky;
     left: 0;
