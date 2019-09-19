@@ -1,9 +1,11 @@
 body {
     text-align: center;
 }
+
 .navbar-brand {
     text-align: center;
 }
+
 .page-footer {
     position: sticky;
     left: 0;
@@ -11,11 +13,18 @@ body {
     width: 100%;
 }
 
-html,body
-{
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+}
+
+.carousel-item {
+
+    width: 1110px;
+    height: 625px;
+    object-fit: scale-down;
 }
