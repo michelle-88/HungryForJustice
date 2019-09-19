@@ -34,3 +34,9 @@ body {
 #food-results {
     color: white
 }
+
+.jumbotron {
+    background-color: transparent;
+    background-color: rgba(96, 125, 139, 0.1);
+    color: whitesmoke
+}
