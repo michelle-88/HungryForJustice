@@ -64,6 +64,19 @@ body {
     display: inline-block;
     margin-bottom: 20px;
     box-shadow: 10px 10px 5px black;
-    background-color:#212121e1;
-    
+    color: whitesmoke;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h3 {
+    color: #b2ebf2
+}
+
+.bio-text{
+    color: whitesmoke
+}
+
+.navbar-brand {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px
 }
