@@ -70,3 +70,12 @@ body {
 h3 {
     color: #b2ebf2
 }
+
+.bio-text{
+    color: whitesmoke
+}
+
+.navbar-brand {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px
+}
