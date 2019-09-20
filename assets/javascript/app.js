@@ -4,8 +4,13 @@ var longitude;
 let locations = [];
 var searchTerm;
 
+$("#submit-button").on("click", function(event){
+    event.preventDefault();
+    searchTerm = $("#food-input").val().trim();
+    console.log(searchTerm);
+    
 // AJAX call for Yelp Fusion API
-var queryYelpUrl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=10&term=pizza&location=orlando";
+var queryYelpUrl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=10&term=" + searchTerm + "&location=orlando";
 
 $.ajax({
     url: queryYelpUrl,
@@ -24,7 +29,7 @@ $.ajax({
 
         // Insert restaurant name, Yelp URL, Yelp image, address, and rating into dynamically created html elements
         var foodName = $("<h3>").text(response.businesses[i].name);
-        var foodUrl = $("<a>").attr("href", response.businesses[i].url).append(foodName);
+        var foodUrl = $("<a target='blank'>").attr("href", response.businesses[i].url).append(foodName);
         var foodImg = $("<img class='food-image'>").attr("src", response.businesses[i].image_url);
         var foodAddress = $("<p class ='card-body'>").text(response.businesses[i].location.display_address);
         var foodRating = $("<p>").text("Rating: " + response.businesses[i].rating + " out of 5");
@@ -78,13 +83,12 @@ $.ajax({
             document.getElementById("result-num-" + i).appendChild(p); 
             // $(document).find("#result-num-" + i).append(p);
         });
-
-
             
-        })
+    });
     
-}) 
+});
 
+});
 
 // .then(function(){
     
