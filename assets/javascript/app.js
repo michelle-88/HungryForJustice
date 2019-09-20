@@ -25,12 +25,12 @@ $.ajax({
     console.log(response);
 
     for(var i = 0; i < response.businesses.length; i++){
-        var foodDiv = $("<div>");
+        var foodDiv = $("<div class ='card'>");
 
         var foodName = $("<h3>").text(response.businesses[i].name);
         var foodUrl = $("<a>").attr("href", response.businesses[i].url).append(foodName);
         var foodImg = $("<img class='food-image'>").attr("src", response.businesses[i].image_url);
-        var foodAddress = $("<p>").text(response.businesses[i].location.display_address);
+        var foodAddress = $("<p class ='card-body'>").text(response.businesses[i].location.display_address);
         var foodRating = $("<p>").text("Rating: " + response.businesses[i].rating + " out of 5");
 
         foodDiv.append(foodUrl, foodImg, foodAddress, foodRating);
