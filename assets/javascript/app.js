@@ -17,16 +17,16 @@ $.ajax({
     console.log(response);
 
     // Loop through the Yelp API response to pull specific data points and dynamically add them to html page
-    for(var i = 0; i < response.businesses.length;i++){
-
+    for(var i = 0; i < response.businesses.length; i++){
         // Create div for each restaurant from the response
-        var foodDiv = $("<div>");
+        var foodDiv = $("<div class ='card rgba-blue-grey-light'>");
+
 
         // Insert restaurant name, Yelp URL, Yelp image, address, and rating into dynamically created html elements
         var foodName = $("<h3>").text(response.businesses[i].name);
         var foodUrl = $("<a>").attr("href", response.businesses[i].url).append(foodName);
         var foodImg = $("<img class='food-image'>").attr("src", response.businesses[i].image_url);
-        var foodAddress = $("<p>").text(response.businesses[i].location.display_address);
+        var foodAddress = $("<p class ='card-body'>").text(response.businesses[i].location.display_address);
         var foodRating = $("<p>").text("Rating: " + response.businesses[i].rating + " out of 5");
 
         // Assign a unique id to each result div so we can target it to append crime data later

@@ -32,7 +32,12 @@ body {
 }
 
 #food-results {
-    color: white
+    color: black;
+    padding: 10px;
+    display: inline-block;
+    column-count: 5;
+    column-gap: 1em;
+    
 }
 
 .jumbotron {
@@ -47,4 +52,31 @@ body {
 #avatar {
     width: 250px;
     height: 250px;
+}
+
+.food-image {
+    width: 250px;
+    height: 250px;
+    
+}
+
+.card {
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px black;
+    color: whitesmoke;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h3 {
+    color: #b2ebf2
+}
+
+.bio-text{
+    color: whitesmoke
+}
+
+.navbar-brand {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px
 }
