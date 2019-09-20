@@ -32,9 +32,12 @@ body {
 }
 
 #food-results {
-    color: white;
+    color: black;
     padding: 10px;
-	display: inline-block;
+    display: inline-block;
+    column-count: 5;
+    column-gap: 1em;
+    
 }
 
 .jumbotron {
@@ -57,6 +60,8 @@ body {
     
 }
 
-.food-div {
+.card {
     display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px black
 }
