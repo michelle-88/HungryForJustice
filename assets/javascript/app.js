@@ -6,8 +6,10 @@ var searchTerm;
 
 $("#submit-button").on("click", function(event){
     event.preventDefault();
+    $("#food-results").empty();
     searchTerm = $("#food-input").val().trim();
     console.log(searchTerm);
+    $("#food-input").val("");
     
 // AJAX call for Yelp Fusion API
 var queryYelpUrl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=10&term=" + searchTerm + "&location=orlando";
