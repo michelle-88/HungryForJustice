@@ -25,7 +25,7 @@ $.ajax({
     console.log(response);
 
     for(var i = 0; i < response.businesses.length; i++){
-        var foodDiv = $("<div>");
+        var foodDiv = $("<div class ='food-div'>");
 
         var foodName = $("<h3>").text(response.businesses[i].name);
         var foodUrl = $("<a>").attr("href", response.businesses[i].url).append(foodName);

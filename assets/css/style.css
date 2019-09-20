@@ -32,7 +32,9 @@ body {
 }
 
 #food-results {
-    color: white
+    color: white;
+    padding: 10px;
+	display: inline-block;
 }
 
 .jumbotron {
@@ -47,4 +49,14 @@ body {
 #avatar {
     width: 250px;
     height: 250px;
+}
+
+.food-image {
+    width: 250px;
+    height: 250px;
+    
+}
+
+.food-div {
+    display: inline-block;
 }
