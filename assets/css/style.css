@@ -38,6 +38,7 @@ body {
     column-count: 5;
     column-gap: 1em;
     
+    
 }
 
 .jumbotron {
@@ -94,7 +95,8 @@ h3 {
 }
 @media only screen and (max-width: 720px) {
     /* For mobile phones: */
-    [class*="col-"] {
-      width: 100%;
-    }
+   #food-results {
+    display: flex;
+    flex-wrap: wrap;
+   }
   }
