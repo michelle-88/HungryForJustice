@@ -90,5 +90,11 @@ h3 {
 
 .navbar-brand {
     font-family: 'Fjalla One', sans-serif;
-    font-size: 40px
+    font-size: 40px;
 }
+@media only screen and (max-width: 720px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
