@@ -44,7 +44,7 @@ $("#submit-button").on("click", function (event) {
             for (var i = 0; i < response.businesses.length; i++) {
                 
                 // Create div for each restaurant from the response
-                var foodDiv = $("<div class ='card rgba-blue-grey-light'>");
+                var foodDiv = $("<div class ='card pt-3 rgba-blue-grey-light'>");
 
                 // Insert restaurant name, Yelp page URL, Yelp image, address, and rating into dynamically created html elements
                 var foodName = $("<h3>").text(response.businesses[i].name);
